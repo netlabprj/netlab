@@ -1,0 +1,112 @@
+<!--{template common/header}-->
+
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		
+		<!--{if empty($_GET[action])}-->
+			{lang faq}
+		<!--{else}-->
+			<a href="misc.php?mod=faq">{lang faq}</a>$navigation
+		<!--{/if}-->
+	</div>
+	<div class="y kym_faq_pn" style="margin-top: -8px;">
+	<form method="post" autocomplete="off" action="misc.php?mod=faq&action=search" class="y mtn pns">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<input type="hidden" name="searchtype" value="all" />
+				<input type="text" name="keyword" size="30" style="height:20px" value="$keyword" class="px vm" />
+				<button type="submit" name="searchsubmit" class="pn vm" value="yes"><em>{lang search}</em></button>
+			</form>
+	</div>
+</div>
+	<div class="studyluc"><img src="./template/kym_xiaomi/style/images/studyluc.jpg" /></div>
+<div id="ct" class="kym_ctbg wp cl" style="margin-top: 20px; margin-bottom:20px;width:999px;">
+
+	<div class="help_mn">
+		<div class="bm bw0">
+			
+			<!--{if empty($_GET[action])}-->
+				<div class="allhelpbg"><h1 class="kym_allhelp">{lang all}{lang faq}</h1></div>
+				<div class="lum">
+					<!--{loop $faqparent $fpid $parent}-->
+						<h2 class="blocktitle"><a href="misc.php?mod=faq&action=faq&id=$fpid">$parent[title]</a></h2>
+						<ul name="$parent[title]">
+							<!--{loop $faqsub[$parent[id]] $sub}-->
+								<li><a href="misc.php?mod=faq&action=faq&id=$sub[fpid]&messageid=$sub[id]">$sub[title]</a></li>
+							<!--{/loop}-->
+						</ul>
+					<!--{/loop}-->
+				</div>
+			<!--{elseif $_GET[action] == 'faq'}-->
+				<div class="allhelpbg_com"><h1 class="kym_allhelp_com">$ctitle</h1></div>
+				<!--{loop $faqlist $faq}-->
+					<div id="messageid$faq[id]_c" class="umh{if $messageid != $faq[id]} umn{/if}" >
+						<h3 onclick="toggle_collapse('messageid$faq[id]', 1, 1);">$faq[title]</h3>
+						
+					</div>
+					<div class="um" id="messageid$faq[id]" style="{if $messageid != $faq[id]} display: none {/if}"><em class="kym_radius"></em>
+$faq[message]</div>
+				<!--{/loop}-->
+			<!--{elseif $_GET[action] == 'search'}-->
+				<h1 class="mt mbm">{lang keyword_faq}</h1>
+				<!--{if $faqlist}-->
+					<!--{loop $faqlist $faq}-->
+						<div class="umh schfaq"><h3>$faq[title]</h3></div>
+						<div class="um">$faq[message]</div>
+					<!--{/loop}-->
+				<!--{else}-->
+					<p class="emp">{lang faq_search_nomatch}</p>
+				<!--{/if}-->
+			<!--{elseif $_GET[action] == 'plugin' && !empty($_GET['id'])}-->
+				<!--{eval include(template($_GET['id']));}-->
+			<!--{/if}-->
+		</div>
+	</div>
+	<div class="helpz">
+	<div class="kym_appl">
+		<div class="kym_tbn">
+			<h2 class="faqtitle"><img src="./template/kym_xiaomi/style/images/faqtitle.png" /></h2>
+			<ul class="kym_helplist cl" style="padding-bottom: 10px;">
+				
+					<!--{loop $faqparent $fpid $parent}-->
+						
+							<!--{loop $faqsub[$parent[id]] $sub}-->
+								<li class="{if $_GET[id] == $sub[fpid]} a{/if}" ><a href="misc.php?mod=faq&action=faq&id=$sub[fpid]&messageid=$sub[id]">$sub[title]</a></li>
+							<!--{/loop}-->
+						
+					<!--{/loop}-->
+			</ul>
+		</div>
+		<!--{hook/faq_extra}-->
+		<div class="kym_tbn_two">
+			<h2 class="faqtitle_two"><img src="./template/kym_xiaomi/style/images/helpnv.png" /></h2>
+			<ul class="kym_helplist_two" style="margin-top: -1px;">
+				<li class="cl{if empty($_GET[action])} a{/if}"><a href="misc.php?mod=faq">{lang all}</a></li>
+				<!--{loop $faqparent $fpid $parent}-->
+					<li name="$parent[title]" class="cl{if $_GET[id] == $fpid} a{/if}"><a href="misc.php?mod=faq&action=faq&id=$fpid">$parent[title]</a></li>
+				<!--{/loop}-->
+				<!--{if !empty($_G['setting']['plugins']['faq'])}-->
+					<!--{loop $_G['setting']['plugins']['faq'] $id $module}-->
+						<li class="cl{if $_GET[id] == $id} a{/if}"><a href="misc.php?mod=faq&action=plugin&id=$id">$module[name]</a></li>
+					<!--{/loop}-->
+				<!--{/if}-->
+			</ul>
+		</div>
+		<div class="kym_tbn_three" style="margin-top: 3px;">
+			<h2 class="faqtitle_two"><img src="./template/kym_xiaomi/style/images/helponline.png" /></h2>
+			<ul class="kym_helplist_three_a cl">
+				<li><!--{if $_G['setting']['site_qq']}--><a href="http://wpa.qq.com/msgrd?V=3&Uin=$_G['setting']['site_qq']&Site=$_G['setting']['bbname']&Menu=yes&from=discuz" target="_blank" title="QQ">在线客服</a><!--{/if}--></li>
+				<li><a href="misc.php?mod=faq" target="_blank" title="意见反馈">意见反馈</a></li>
+			</ul>
+			<div class="servicetime cl">
+			<p>客服邮箱：service@qq.com</p>
+			<p>客服热线：400-123-4567</p>
+			<p>服务时间：8: 00-24: 00</p>
+			</div>
+			
+		</div>
+	</div>
+	</div>
+</div>
+
+<!--{template common/footer}-->

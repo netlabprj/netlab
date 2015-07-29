@@ -1,0 +1,163 @@
+<!--{subtemplate common/header}-->
+<!--[name]小鱼新闻[/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<link rel="stylesheet" type="text/css" href="./template/kym_xiaomi/style/css/newcom.css" />
+
+<style id="diy_style" type="text/css"></style>
+<style>.pg strong, .pg a:hover {
+    background-color: #E60012;
+    color: #FFFFFF;
+}
+
+.pgs {
+    clear: both;
+    font-family: Arial;
+    height: 28px;
+    padding: 20px 0 10px;
+    text-align: center;
+}
+.catname{ width:1000px; margin:auto; clear:both;}
+.kym_catnamez{ float:left; width:250px; height:80px; line-height:60px; margin-right:30px; text-align:left; overflow:hidden; }
+.kym_catnamez li a{font-size:45px; font-weight:100; font-family: "微软雅黑"; color:#333333;}
+.kym_catnamez li{ float:left; height: 80px;}
+.kym_catnamey{ float:left; padding-top:26px; width:720px;}
+.kym_catnamey li{ float:left; margin-right:20px; background:#FFFFFF; border:1px solid #cccccc; border-radius:5px; margin-bottom:5px; padding:0px 10px;}
+.kym_catnamey li a{ font-size:12px; color:#1b1a1a; }
+</style>
+
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+<div class="catname">
+		
+
+			<div class="kym_catnamez">
+				<!--{loop $cat[others] $value}-->
+				<li><a href="{echo getportalcategoryurl($value[catid])}">$value[catname]</a></li>
+				<!--{/loop}-->
+			</div>
+	<!--{if $cat[subs]}-->
+			<div class="kym_catnamey">
+				
+				<!--{eval $i = 1;}-->
+				<!--{loop $cat[subs] $value}-->
+				<li><!--{if $i != 1}--><!--{/if}--><a href="{$portalcategory[$value['catid']]['caturl']}" class="kym_cata">$value[catname]</a><!--{eval $i--;}--></li>
+				<!--{/loop}-->
+			</div>
+			<!--{/if}-->
+</div>
+<div class="main" style="margin-bottom:30px;">
+	<div class="newsL">
+	
+		<ul class="newsList" style="margin-top:-15px;">
+			<!--{loop $list['list'] $value}-->
+			<!--{eval $highlight = article_title_style($value);}-->
+			<!--{eval $article_url = fetch_article_url($value);}-->		
+			<li><div class="pic"><!--{if $value[pic]}--><a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" class="tn" /></a><!--{/if}--></div>						
+			<div class="txt"><h3><a href="$article_url" target="_blank" class="xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></h3>$value[summary]</div>
+			<div class="newsDate">
+			<span class="d1"><!--{eval echo dgmdate(strtotime($value['dateline']), '  d')}--></span>
+			<span class="d2"><!--{eval echo dgmdate(strtotime($value['dateline']), 'M')}--><br><!--{eval echo dgmdate(strtotime($value['dateline']), 'Y')}--> </span>
+			</div></li>
+		<!--{/loop}-->
+		</ul>
+	
+		<!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}-->
+	</div>
+	<div class="newsR">
+		<div class="sd xm_sd">
+<div class="xm_bm post_new">
+<div class="bm_cc">
+
+<a class="post_btn" href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]">
+<img src="template/kym_xiaomi/style/images/pn_post_big_wz.png" alt="发新帖">
+</a>
+</div>
+</div>
+<div class="bm xm_bm xm_bm_hot">
+<div class="bm_h">
+<h2 id="switchTab" class="tab">
+<span class="fb" index="0">版块推荐</span>
+<span class="" index="1">百宝箱</span>
+</h2>
+</div>
+<div id="contentTab" class="bm_c">
+<!--[diy=diybank]--><div id="diybank" class="area"></div><!--[/diy]-->
+<!--[diy=diybox]--><div id="diybox" class="area"></div><!--[/diy]-->
+</div>
+<script type="text/javascript">
+(function() {
+var s = document.getElementById("switchTab");
+var si = s.getElementsByTagName("span");
+var c = document.getElementById("contentTab");
+var ci = c.getElementsByTagName("ul");
+for (var i = 0; i < si.length; i++) {
+si[i].setAttribute("index", i);
+si[i].addEventListener("mouseover", function() {
+var index = this.getAttribute("index");
+for (var j = 0; j < ci.length; j++) {
+if (j == index) {
+si[j].className = "fb";
+ci[j].style.display = "block";
+} else {
+si[j].className = "";
+ci[j].style.display = "none";
+}
+}
+})
+}
+})()
+</script>
+</div>
+<div class="xm_bm xm_bm_top">
+			<div class="bm_h">
+				<h2>精彩推荐</h2>
+				<a target="_blank" href="#">更多></a>
+				<a target="_blank" href="#">更多></a>
+			</div>
+			<div class="bm_c">
+				<ul>
+				<!--[diy=diy_jc]--><div id="diy_jc" class="area"></div><!--[/diy]-->
+					
+				</ul>
+			</div>
+	</div>
+	<div class="xm_bm xm_bm_news">
+		<div class="bm_h">
+			<h2>热点动态</h2>
+			<a target="_blank" href="#">更多></a>
+		</div>
+		<div class="bm_c">
+				<ul>
+				<!--[diy=diy_dt]--><div id="diy_dt" class="area"></div><!--[/diy]-->
+				
+				</ul>
+		</div>
+	</div>
+	<div id="xm_store" class="xm_bm xm_bm_gal xm_bm_store">
+			<div class="bm_h">
+			<h2>精品专区</h2>
+			</div>
+		<div class="bm_c">
+			<!--[diy=diy_jiaoc]--><div id="diy_jiaoc" class="area"></div><!--[/diy]-->
+		</div>
+	</div>
+</div>
+</div>
+<div class="cl"></div>
+</div>
+	
+<!--{template common/footer}-->
+
+
+
+

@@ -1,0 +1,36 @@
+.newsL { width: 715px; float: left; overflow: hidden; padding-bottom: 20px; }
+.newsR { width: 230px; float: right; overflow: hidden; padding-bottom: 20px; }
+.sideMenu { clear: both; margin-bottom: 30px; }
+.sideMenu li a { background-color: rgb(247, 247, 247); font-size: 16px; display: block; clear: both; height: 39px; line-height: 39px; padding-left: 25px; cursor: pointer; color: rgb(0, 0, 0); border-top: 1px solid rgb(255, 255, 255); border-bottom: 1px solid rgb(221, 221, 221); }
+.sideMenu li a span { color: rgb(215, 215, 215); }
+.sideMenu li a.menuOn, .sideMenu li a:hover { background-color: rgb(230, 0, 18); color: rgb(255, 255, 255); border-top: 1px solid rgb(255, 255, 255); border-bottom: 1px solid rgb(253, 130, 0); }
+.sideInfo { height: 52px; padding-top: 110px;  border-bottom: 1px solid rgb(214, 214, 214); text-align: center; margin-bottom: 30px; }
+.sideInfo a.sendBt { display: inline-block; width: 200px; height: 37px; background: url('../images/bt_sendxq.gif') no-repeat scroll 0px 0px transparent; }
+.sideInfo a.sendBt:hover { background: url('../images/bt_sendxq.gif') no-repeat scroll 0px -43px transparent; }
+.conHeaderTop { width: 100%; height: 40px; overflow: hidden; clear: both; background: url('../images/topbar_comm.gif') repeat-x scroll 0px 0px transparent; position: fixed; z-index: 190; top: 0px; left:0; }
+#conHeader { width: 1000px; clear: both; height: 70px; margin: 0px auto; line-height: 40px; color: rgb(153, 153, 153); }
+#conHeader a.listBt, #conHeader a.homeBt, #conHeader a.weiboSina, #conHeader a.weiboQQ, a.moreBt, a.gobackBt, span.listBtOn, span.homeBtOn { display: inline-block; background-image: url('../images/content_bt.gif'); background-repeat: no-repeat; cursor: pointer; }
+#conHeader a.listBt { width: 50px; height: 40px; background-position: 0px -252px; position: relative; }
+#conHeader a.homeBt { width: 50px; height: 40px; background-position: -50px -176px; position: relative; }
+#conHeader span.listBtOn { display: none; width: 50px; height: 40px; background-position: 0px -176px; position: absolute; z-index: 19; top: 0px; left: 0px; }
+#conHeader span.homeBtOn { display: none; width: 50px; height: 40px; background-position: -50px -252px; position: absolute; z-index: 19; top: 0px; left: 0px; }
+#conHeader a.weiboSina { width: 20px; height: 20px; line-height: 20px; margin: 10px 2px; background-position: 0px -224px; }
+#conHeader a.weiboQQ { width: 20px; height: 20px; line-height: 20px; margin: 10px 2px; background-position: -24px -224px; }
+.newsConTit { padding: 28px 0px; height: 100px; clear: both; border-bottom: 1px solid rgb(229, 229, 229); color: rgb(153, 153, 153); }
+.newsConTit .pic { float: left; width: 175px; height: 112px; position: relative; background: url('../images/newslist_picbg.gif') no-repeat scroll center bottom transparent; }
+.newsConTit .pic img { width: 175px; height: 110px; }
+.newsConTit .newsDate { height: 30px; float: right; margin-top: 75px; background: url('../images/newsdate.gif') no-repeat scroll left center transparent; padding-left: 22px; }
+.newsConTit .newsDate span.d1 { display: inline-block; padding: 0px 3px; font-size: 26px; height: 30px; line-height: 29px; font-weight: bold; }
+.newsConTit .newsDate span.d2 { display: inline-block; font-size: 12px; height: 24px; line-height: 12px; padding-top: 3px ! important; }
+.newsConTit h1 { width: 410px; float: left; padding: 0px 0px 10px 20px; font-size: 25px; font-weight: normal; color: rgb(51, 51, 51); line-height: 25px; }
+.newsContent { width: 715px; overflow: hidden; padding: 20px 0px; clear: both; }
+.newsContent p { padding: 8px 0px; clear: both; line-height: 22px; }
+a.moreBt { width: 154px; height: 34px; margin: 20px 3px; background-position: 0px 0px; }
+a.moreBt:hover { background-position: 0px -44px; }
+a.gobackBt { width: 114px; height: 34px; margin: 20px 3px; background-position: 0px -88px; }
+a.gobackBt:hover { background-position: 0px -132px; }
+.hr30 { clear: both; height: 40px; }
+
+.erweima {text-align:center;}
+.erweima img{width:150px;height:150px;}
+.erweima span{font-size: 12px;color:#2E7E02}

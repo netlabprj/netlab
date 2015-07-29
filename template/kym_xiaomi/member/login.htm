@@ -1,0 +1,300 @@
+<!--{template common/header}-->
+<style>.rfm{margin-bottom: 10px; }</style>
+<!--{eval $loginhash = 'L'.random(4);}-->
+<!--{if empty($_GET['infloat'])}-->
+
+<div id="pt" class="bm cl">
+	<!--{if empty($gid) && $announcements}-->
+	<div class="y">
+		<div id="an">
+			<dl class="cl">
+				<dt class="z xw1">{lang announcements}:&nbsp;</dt>
+				<dd>
+					<div id="anc"><ul id="ancl">$announcements</ul></div>
+				</dd>
+			</dl>
+		</div>
+		<script type="text/javascript">announcement();</script>
+	</div>
+	<!--{/if}-->
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="forum.php">{$_G[setting][navs][2][navname]}</a><em>&raquo;</em>登陆
+	</div>
+</div>
+<div id="ct" class="ptm wp w cl">
+	<div class="nfl" id="main_succeed" style="display: none">
+		<div class="f_c altw">
+			<div class="alert_right">
+				<p id="succeedmessage"></p>
+				<p id="succeedlocation" class="alert_btnleft"></p>
+				<p class="alert_btnleft"><a id="succeedmessage_href">{lang message_forward}</a></p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="mn" id="main_message" style="background:none;">
+				<div class="bm" style=" background:none; border:none;">
+			
+			<div class="bm_h bbs" style="display:none">
+				<span class="y">
+					<!--{hook/logging_side_top}-->
+					<a href="member.php?mod={$_G[setting][regname]}" class="xi2">{lang login_guest}</a>
+				</span>
+				<!--{if !$secchecklogin2}-->
+					<h3 class="xs2">{lang login}</h3>
+				<!--{else}-->
+					<h3 class="xs2">{lang login_seccheck2}</h3>
+				<!--{/if}-->
+			</div>
+		<div>
+<!--{/if}-->
+<!--{if !empty($_GET['infloat'])}--><style>.kym_loginlogo{display:none;}#wrapper{ display:none;}.kym_lostpw{ margin-bottom:10px;} </style><!--{else}-->
+		<!--{/if}-->
+<div id="main_messaqge_$loginhash"{if $auth} style="width: auto; "{/if}>
+	<div id="layer_login_$loginhash" style="width:650px;">
+		<h3 class="flb">
+			<em id="returnmessage_$loginhash" class="kym_return">
+				<!--{if !empty($_GET['infloat'])}--><!--{if !empty($_GET['guestmessage'])}-->{lang login_guestmessage}<!--{elseif $auth}-->{lang profile_renew}<!--{else}-->登陆与注�?!--{/if}--><!--{/if}-->
+			</em>
+			<span><!--{if !empty($_GET['infloat']) && !isset($_GET['frommessage'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('$_GET[handlekey]', 0, 1);" title="{lang close}">{lang close}</a><!--{/if}--></span>
+		</h3>
+		<!--{hook/logging_top}-->
+		<form method="post" autocomplete="off" name="login" id="loginform_$loginhash" class="cl" onsubmit="{if $this->setting['pwdsafety']}pwmd5('password3_$loginhash');{/if}pwdclear = 1;ajaxpost('loginform_$loginhash', 'returnmessage_$loginhash', 'returnmessage_$loginhash', 'onerror');return false;" action="member.php?mod=logging&action=login&loginsubmit=yes{if !empty($_GET['handlekey'])}&handlekey=$_GET[handlekey]{/if}{if isset($_GET['frommessage'])}&frommessage{/if}&loginhash=$loginhash">
+			<div class="c cl">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<input type="hidden" name="referer" value="{echo dreferer()}" />
+				<!--{if $auth}-->
+					<input type="hidden" name="auth" value="$auth" />
+				<!--{/if}-->
+				
+				<!--{if $invite}-->
+				<div class="rfm">
+					<table>
+						<tr>
+							<th>{lang register_from}</th>
+							<td><a href="home.php?mod=space&uid=$invite[uid]" target="_blank">$invite[username]</a></td>
+						</tr>
+					</table>
+				</div>
+				<!--{/if}-->
+				<!--{if !$auth}-->
+				<div class="kym_loginlogo">
+			 	
+				</div>
+				
+				<div class="rfm" style="margin-top:40px;">
+					<table>
+						<tr>
+						<!--{if !empty($_GET['infloat'])}--><th style="width: 75px;"><!--{else}--><th style="width: 155px;"><!--{/if}--></th>
+							
+							<td class="kym_td" ><em class="inbg"></em><input type="text" name="username" id="username_$loginhash" autocomplete="off" size="30" class="kym_fre" tabindex="1" placeholder="邮箱/用户�?UID" value="$username" /></td>
+							
+						</tr>
+					</table>
+				</div>
+				<div class="rfm">
+					<table>
+						<tr>
+							<th style="display:none"><label for="password3_$loginhash" >{lang login_password}:</label></th>
+							<!--{if !empty($_GET['infloat'])}--><th style="width: 75px;"><!--{else}--><th style="width: 155px;"><!--{/if}--></th>
+							<td class="kym_td"><em class="inbgpass"></em><input type="password" id="password3_$loginhash" name="password" onfocus="clearpwd()" size="30" class="kym_fre" placeholder="密码"tabindex="1" /></td>
+							
+						</tr>
+					</table>
+				</div>
+				<!--{/if}-->
+
+				<!--{if empty($_GET['auth']) || $questionexist}-->
+				<div class="rfm xiaoyu_select">
+					<table>
+						<tr>
+							<th style="display:none">{lang security_q}:</th>
+							<!--{if !empty($_GET['infloat'])}--><th style="width: 75px;"><!--{else}--><th style="width: 155px;"><!--{/if}--></th>
+							<td style="margin:0px; padding:0px 0 0px 2px;"><select id="loginquestionid_$loginhash" width="213" name="questionid" {if !$questionexist} onchange="if($('loginquestionid_$loginhash').value > 0) {$('loginanswer_row_$loginhash').style.display='';} else {$('loginanswer_row_$loginhash').style.display='none';}"<!--{/if}-->>
+								<option value="0"><!--{if $questionexist}-->{lang security_question_0}<!--{else}-->{lang security_question}<!--{/if}--></option>
+								<option value="1">{lang security_question_1}</option>
+								<option value="2">{lang security_question_2}</option>
+								<option value="3">{lang security_question_3}</option>
+								<option value="4">{lang security_question_4}</option>
+								<option value="5">{lang security_question_5}</option>
+								<option value="6">{lang security_question_6}</option>
+								<option value="7">{lang security_question_7}</option>
+							</select></td>
+						</tr>
+					</table>
+				</div>
+				<style>.xiaoyu_select select{ width:320px; background:#ffffff; border-radius:6px; padding:10px 5px;  }</style>
+				<div class="rfm" id="loginanswer_row_$loginhash" {if !$questionexist} style="display:none"{/if}>
+					<table>
+						<tr>
+						<th style="display:none">{lang security_a}:</th>
+							<!--{if !empty($_GET['infloat'])}--><th style="width: 75px;"><!--{else}--><th style="width: 155px;"><!--{/if}--></th>
+							<td style="padding-left:0px;"><input type="text" name="answer" id="loginanswer_$loginhash" autocomplete="off" size="30" class="kym_asklist" placeholder="问题答案"tabindex="1" /></td>
+						</tr>
+					</table>
+				</div>
+				<!--{/if}-->
+
+				<!--{if $seccodecheck}-->
+					<!--{block sectpl}--><div class="rfm"><table><tr><!--{if !empty($_GET['infloat'])}--><th style="width: 75px;"><!--{else}--><th style="width: 155px;"><!--{/if}--><sec>: </th><td><sec><br /><sec></td></tr></table></div><!--{/block}-->
+					<!--{subtemplate common/seccheck}-->
+				<!--{/if}-->
+
+				<!--{hook/logging_input}-->
+
+				<!--{if !empty($_GET['infloat'])}-->
+				<div class="rfm {if !empty($_GET['infloat'])} bw0{/if}">
+					<table>
+						<tr>
+							<!--{if !empty($_GET['infloat'])}--><th style="width: 75px;"><!--{else}--><th style="width: 155px;"><!--{/if}--></th>
+							<td style="padding-right: 176px;"><label for="cookietime_$loginhash"><input type="checkbox" class="pc" name="cookietime" id="cookietime_$loginhash" tabindex="1" value="2592000" $cookietimecheck />{lang login_permanent}</label></td>
+							<td class="tipcol" style="float:right"><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">忘记密码?</a></td>
+						</tr>
+					</table>
+				</div>
+				<!--{/if}-->
+				<div class="rfm">
+					<table width="100%">
+						<tr>
+							<!--{if !empty($_GET['infloat'])}-->
+							<th style="width: 75px;"></th>
+							<td style="width:210px; "><button class="kym_login_pnwid" type="submit" name="loginsubmit" value="true" tabindex="1"><strong>立即登陆</strong></button></td>
+							<td><a class="kym_login_zcwid" href="member.php?mod={$_G[setting][regname]}">免费注册</a></td>
+							<!--{else}-->
+							<th style="width: 155px;"></th>
+							<td style=" padding:0px 0 0 2px;"><button class="kym_login_pn" type="submit" name="loginsubmit" value="true" tabindex="1"><strong>立即登陆</strong></button></td><!--{/if}-->
+								
+							
+							<td style="display:none;">
+								<!--{if $this->setting['sitemessage'][login] && empty($_GET['infloat'])}--><a href="javascript:;" id="custominfo_login_$loginhash" class="y">&nbsp;<img src="{IMGDIR}/info_small.gif" alt="{lang faq}" class="vm" /></a><!--{/if}-->
+								<!--{if !$this->setting['bbclosed'] && empty($_GET['infloat'])}--><a href="javascript:;" onclick="ajaxget('member.php?mod=clearcookies&formhash={FORMHASH}', 'returnmessage_$loginhash', 'returnmessage_$loginhash');return false;" title="{lang login_clearcookies}" class="y">{lang login_clearcookies}</a><!--{/if}-->
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+				<!--{if !empty($_GET['infloat'])}--><!--{else}-->
+				<div class="rfm {if !empty($_GET['infloat'])} bw0{/if}">
+					<table >
+						<tr>
+							<!--{if !empty($_GET['infloat'])}--><th style="width: 75px;"><!--{else}--><th style="width: 155px;"><!--{/if}--></th>
+							<td style="padding:0 176px 0 2px; "><label for="cookietime_$loginhash"><input type="checkbox" class="pc" name="cookietime" id="cookietime_$loginhash" tabindex="1" value="2592000" $cookietimecheck />{lang login_permanent}</label></td>
+							<td class="tipcol" style="float:right; padding-top:0px; padding-bottom:0px;"><a href="javascript:;" onclick="display('layer_login_$loginhash');display('layer_lostpw_$loginhash');" title="{lang getpassword}">忘记密码?</a></td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="rfm" style="text-align:center; margin-bottom:50px; margin-left:-50px;">
+				<a class="kym_tipcol" href="member.php?mod={$_G[setting][regname]}">免费注册账户</a>
+					
+				</div><!--{/if}-->
+				<!--{if !empty($_G['setting']['pluginhooks']['logging_method'])}-->
+					<div class="rfm bw0 {if empty($_GET['infloat'])} mbw{/if}">
+						<hr class="l" />
+						<table>
+							<tr>
+								<th>{lang login_method}:</th>
+								<td><!--{hook/logging_method}--></td>
+							</tr>
+						</table>
+					</div>
+				<!--{/if}-->
+			</div>
+		</form>
+	</div>
+	<!--{if $_G['setting']['pwdsafety']}-->
+		<script type="text/javascript" src="{$_G['setting']['jspath']}md5.js?{VERHASH}" reload="1"></script>
+	<!--{/if}-->
+	<div id="layer_lostpw_$loginhash" style="display: none;">
+		<h3 class="flb">
+			<em id="returnmessage3_$loginhash" style="color:#656D78;">{lang getpassword}</em>
+			<span><!--{if !empty($_GET['infloat']) && !isset($_GET['frommessage'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('login')" title="{lang close}">{lang close}</a><!--{/if}--></span>
+		</h3>
+		<!--{subtemplate munelist/pass}-->
+		<form method="post" autocomplete="off" id="lostpwform_$loginhash" class="cl" onsubmit="ajaxpost('lostpwform_$loginhash', 'returnmessage3_$loginhash', 'returnmessage3_$loginhash', 'onerror');return false;" action="member.php?mod=lostpasswd&lostpwsubmit=yes&infloat=yes">
+			<div class="c cl">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<input type="hidden" name="handlekey" value="lostpwform" />
+				<div class="rfm">
+					<table>
+						<tr>
+							<th><span class="rq">*</span><label for="lostpw_email">{lang email}:</label></th>
+							<td><input type="text" name="email" id="lostpw_email" size="30" value=""  tabindex="1" class="kym_lostpw" /></td>
+						</tr>
+					</table>
+				</div>
+				<div class="rfm">
+					<table>
+						<tr>
+							<th><label for="lostpw_username">{lang username}:</label></th>
+							<td><input type="text" name="username" id="lostpw_username" size="30" value=""  tabindex="1" class="kym_lostpw" /></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="rfm mbw bw0">
+					<table>
+						<tr>
+							<th></th>
+							<td><button class="kym_lostnet" type="submit" name="lostpwsubmit" value="true" tabindex="100"><span>下一�?/span></button></td>
+						</tr>
+					</table>
+				</div>
+				<div class="rfm"><p class="kym_ask" style=" text-align:center; width:600px; margin-bottom:20px;"><a target="_blank" href="misc.php?mod=faq"><span style="padding:0 6px;background:#FD843F; border-radius:5px; color:#FFFFFF; height:19px; font-size:14px; margin-right:5px;">?</span>常见问题</a></p>
+				</div>
+			</div>
+		</form>
+		
+	</div>
+</div>
+
+<div id="layer_message_$loginhash"{if empty($_GET['infloat'])} class="f_c blr nfl"{/if} style="display: none;">
+	<h3 class="flb" id="layer_header_$loginhash">
+		<!--{if !empty($_GET['infloat']) && !isset($_GET['frommessage'])}-->
+		<em>{lang login_member}</em>
+		<span><a href="javascript:;" class="flbc" onclick="hideWindow('login')" title="{lang close}">{lang close}</a></span>
+		<!--{/if}-->
+	</h3>
+	
+<script type="text/javascript" reload="1">
+<!--{if !isset($_GET['viewlostpw'])}-->
+	var pwdclear = 0;
+	function initinput_login() {
+		document.body.focus();
+		<!--{if !$auth}-->
+			if($('loginform_$loginhash')) {
+				$('loginform_$loginhash').username.focus();
+			}
+			<!--{if !$this->setting['autoidselect']}-->
+				simulateSelect('loginfield_$loginhash');
+			<!--{/if}-->
+		<!--{elseif $seccodecheck && !(empty($_GET['auth']) || $questionexist)}-->
+			if($('loginform_$loginhash')) {
+				safescript('seccodefocus', function() {$('loginform_$loginhash').seccodeverify.focus()}, 500, 10);
+			}			
+		<!--{/if}-->
+	}
+	initinput_login();
+	<!--{if $this->setting['sitemessage']['login']}-->
+	showPrompt('custominfo_login_$loginhash', 'mouseover', '<!--{echo trim($this->setting['sitemessage'][login][array_rand($this->setting['sitemessage'][login])])}-->', $this->setting['sitemessage'][time]);
+	<!--{/if}-->
+
+	function clearpwd() {
+		if(pwdclear) {
+			$('password3_$loginhash').value = '';
+		}
+		pwdclear = 0;
+	}
+<!--{else}-->
+	display('layer_login_$loginhash');
+	display('layer_lostpw_$loginhash');
+	$('lostpw_email').focus();
+<!--{/if}-->
+</script>
+
+<!--{eval updatesession();}-->
+<!--{if empty($_GET['infloat'])}-->
+	</div></div></div></div>
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->

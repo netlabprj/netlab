@@ -1,0 +1,229 @@
+body{margin: 0px; padding: 0px;}
+.listTitle{height: 54px; color: rgb(67, 74, 82); margin-bottom: 20px;}
+.listTitle .title-l{line-height: 54px; font-family: "Microsoft Yahei", SimHei, sans-serif; font-size: 44px; font-weight: bold; float: left;}
+.listTitle .nav-r{margin-top: 25px; float: right;}
+.listTitle .nav-r a{color: rgb(67, 74, 82);}
+.listTitle .nav-r a:hover{color: rgb(255, 111, 61);}
+.listTitle .nav-r a.current{color: rgb(255, 111, 61); font-weight: bold;}
+.listTitle .nav-r a.current:hover{}
+.FocusPic .title{left: 0px; width: 298px; height: 30px; bottom: 0px; line-height: 30px; overflow: hidden; position: absolute;}
+.FocusPic .title a{color: rgb(255, 255, 255); padding-left: 15px; font-size: 14px; display: block;}
+h1{margin: 0px; padding: 0px;}
+h1{font-size: 100%; font-weight: normal;}
+#Article h1{font: 800 26px/30px "宋体", arial; padding: 16px 0px 8px; text-align: center; color: rgb(0, 0, 0); margin-bottom: 6px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;}
+#Article h1 span{color: rgb(153, 153, 153); line-height: 20px; font-size: 12px; font-weight: normal;}
+h2{margin: 0px; padding: 0px;}
+h2{font-size: 100%; font-weight: normal;}
+.news h2{height: 40px; line-height: 40px; overflow: hidden; font-size: 22px; margin-top: 15px; margin-bottom: 3px; white-space: nowrap; -ms-text-overflow: ellipsis;}
+.news h2 a{color: rgb(67, 74, 84);}
+.rom .download h2{margin: 5px 0px; color: rgb(255, 72, 0);}
+h3{margin: 0px; padding: 0px;}
+h3{font-size: 100%; font-weight: normal;}
+h4{margin: 0px; padding: 0px;}
+h4{font-size: 100%; font-weight: normal;}
+.box h4{ filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ffffff',endColorStr='#fafafa',gradientType='0');background:-webkit-linear-gradient(top,#ffffff,#fafafa);background:-moz-linear-gradient(top,#ffffff,#fafafa);background:-ms-linear-gradient(top,#ffffff,#fafafa);background:-o-linear-gradient(top,#ffffff,#fafafa);background:linear-gradient(top,#ffffff,#fafafa); border-radius: 5px 5px 0px 0px; height: 40px; line-height: 40px; border-bottom-color: rgb(232, 232, 232); border-bottom-width: 1px; border-bottom-style: solid;}
+.right .box h4{width: 300px; margin-left: -20px;}
+.box h4 strong{width: 122px; color: rgb(67, 74, 84); font-weight: bold; margin-left: 15px; display: block;}
+.box h4 .r{margin: -40px 20px 0px 0px; color: rgb(51, 51, 51); font-size: 12px; float: right;}
+.box h4 a.r{color: rgb(102, 126, 189);}
+.box h4 a.r:hover{color: rgb(255, 102, 0);}
+.box h4 strong a{color: rgb(51, 51, 51); font-size: 14px; margin-top: 0px; float: none;}
+.box h4 strong a:hover{color: rgb(255, 102, 0);}
+.hot h4{border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; position: relative;}
+.content .col-left h4{width: 640px; margin-left: -15px;}
+.content .col-left h4 strong{width: auto;}
+h5{margin: 0px; padding: 0px;}
+h5{font-size: 100%; font-weight: normal;}
+.footer .links h5{width: 70px; font-weight: bold; float: left;}
+#Article .related h5{padding-bottom: 4px;}
+h6{margin: 0px; padding: 0px;}
+h6{font-size: 100%; font-weight: normal;}
+strong{font-style: normal; font-weight: normal;}
+.rom .download strong{margin: 15px 0px 5px; text-align: center; color: rgb(255, 90, 0); font-size: 45px; font-weight: bold; display: block;}
+.rom .download strong span{font-size: 14px; font-weight: normal;}
+.picShow span strong{background: rgba(0, 0, 0, 0.5); border-radius: 0px 0px 5px 5px; left: 0px; width: 100%; height: 25px; text-align: center; bottom: 0px; color: rgb(255, 255, 255); line-height: 25px; font-size: 12px; position: absolute;}
+.recommend li strong{text-align: center; margin-top: 15px; display: block;}
+#Article .info strong{font-weight: bold;}
+li{margin: 0px; padding: 0px;}
+.nav li{height: 45px; line-height: 45px; float: left; position: relative;}
+.subNav li{padding: 0px 13px; height: 14px; line-height: 14px; margin-left: -1px; vertical-align: middle; border-left-color: rgb(87, 87, 87); border-left-width: 1px; border-left-style: solid; float: left;}
+.listTop li{width: 231px; margin-left: 12px; float: left;}
+.news li{background: url("../images/newsLine.gif") no-repeat bottom; padding-top: 0px; padding-bottom: 30px;}
+.hot li{background: rgb(255, 255, 255); width: 150px; height: 45px; text-align: center; line-height: 45px; border-top-color: rgb(238, 238, 238); border-right-color: rgb(238, 238, 238); border-top-width: 1px; border-right-width: 1px; border-top-style: solid; border-right-style: solid; float: left;}
+.hot li a{display: block;}
+.hot li a:hover{color: rgb(255, 111, 61); font-weight: bold;}
+.editorChoice li{padding: 4px 0px 5px;}
+.activities li{text-align: center; margin-top: 20px; margin-bottom: -5px;}
+.activities li img{margin-bottom: 15px; display: block;}
+.picShow li{margin-left: 5px; float: left; opacity: 0.5; _display: inline;}
+.play li{height: 76px; margin-left: 80px; position: relative;}
+.academy li{width: 125px; height: 145px; line-height: 18px; margin-left: 10px; float: left; _display: inline;}
+.academy li a{color: rgb(67, 74, 84);}
+.academy li a:hover{color: rgb(255, 102, 0);}
+.academy li img{margin: 0px 0px 12px; display: block;}
+.recommend li{margin: 20px 0px -5px;}
+.recommend li img{display: block;}
+.star li{margin: 0px 0px 15px 80px; height: 64px; color: rgb(57, 57, 57); line-height: 18px; font-size: 12px; position: relative;}
+.star li img{left: -80px; top: 0px; position: absolute;}
+.star li a{line-height: 24px; font-size: 14px;}
+.star li span{color: rgb(170, 178, 189); display: block;}
+.store ul li{position: relative;}
+ul{margin: 0px; padding: 0px;}
+ul{list-style: none;}
+ul{margin: 0px;}
+.subNav ul{margin: 0px auto; padding: 5px 0px; width: 980px; overflow: hidden; font-size: 12px;}
+.hot ul{width: 302px; overflow: hidden; margin-left: -20px;}
+.editorChoice ul{margin: 0px 0px 0px 24px; padding: 10px 0px; line-height: 24px;}
+.picShow ul{margin: 20px 0px 0px -6px; height: 47px; padding-top: 190px; padding-bottom: 20px; position: relative;}
+.picShow ul a{display: block; _text-decoration: none;}
+.play ul{padding: 0px 0px 12px; margin-top: 20px;}
+.play ul img{border-radius: 12px; left: -80px; top: 0px; position: absolute;}
+.play ul a{height: 30px; color: rgb(0, 0, 0); line-height: 30px; overflow: hidden; padding-top: 5px; display: block; white-space: nowrap; -ms-text-overflow: ellipsis; _width: 100%;}
+.play ul a:hover{color: rgb(255, 102, 0);}
+.play ul p{color: rgb(135, 135, 135); line-height: 20px; overflow: hidden; font-size: 12px; white-space: nowrap; -ms-text-overflow: ellipsis; _width: 100%;}
+.academy ul{margin-top: 20px; margin-left: -10px;}
+.recommend ul{padding: 0px 0px 20px; margin-top: 5px;}
+.star ul{padding: 0px 0px 10px; margin-top: 15px;}
+.store ul{margin: 20px 0px 0px; padding-bottom: 20px;}
+.store ul img{display: block;}
+.store ul span{background: rgba(0, 0, 0, 0.5); border-radius: 0px 0px 5px 5px; left: 0px; width: 100%; height: 32px; text-align: center; bottom: 0px; color: rgb(255, 255, 255); line-height: 32px; margin-top: -32px; position: absolute;}
+ol{margin: 0px; padding: 0px;}
+ol{list-style: none;}
+.Article-Tool{padding: 10px 0px 0px; text-align: right; vertical-align: middle;}
+.Article-Tool a{background: url("../images/v9/icon.png") no-repeat; width: 16px; height: 16px; line-height: 16px; margin-left: 6px; vertical-align: middle; display: inline-block;}
+.Article-Tool a:hover{text-decoration: none;}
+.Article-Tool a.t{background-position: left -336px; width: auto; color: rgb(136, 150, 177); padding-left: 16px;}
+.Article-Tool a.t6{background-position: left -336px; width: auto; color: rgb(136, 150, 177); padding-left: 16px;}
+.Article-Tool a.t1{background-position: left -115px;}
+.Article-Tool a.t2{background-position: left -159px;}
+.Article-Tool a.t3{background-position: left -205px;}
+.Article-Tool a.t4{background-position: left -250px;}
+.Article-Tool a.t5{background-position: left -294px;}
+.Article-Tool a.t6{background-position: left -421px; padding-left: 18px;}
+.Article-Tool img{border-radius: 0px; vertical-align: middle;}
+textarea{margin: 0px; padding: 0px;}
+textarea{font-family: inherit; font-size: inherit; font-weight: inherit;}
+textarea{}
+a{color: rgb(111, 111, 111); text-decoration: none;}
+.topTBInner a{padding: 0px 4px; float: left;}
+.signIn a{color: rgb(102, 102, 102);}
+.signedIn a{color: rgb(102, 102, 102);}
+.signIn a{margin: 46px 0px 0px -1px; padding: 0px 12px; height: 16px; line-height: 16px; border-left-color: rgb(102, 102, 102); border-left-width: 1px; border-left-style: solid; float: left;}
+.nav a{padding: 0px 13px; color: rgb(255, 255, 255); font-size: 16px; display: block;}
+.nav .current a{background: rgb(237, 95, 48); color: rgb(255, 255, 255);}
+.bbsNav .bbsLinks a{padding: 0px 10px; height: 40px; color: rgb(151, 76, 25); line-height: 40px; font-size: 14px; border-bottom-color: rgb(244, 237, 217); border-bottom-width: 1px; border-bottom-style: solid; display: block;}
+.current .bbsNav .bbsLinks a{background: rgb(255, 251, 234);}
+.subNav a{color: rgb(87, 87, 87); vertical-align: top;}
+.footer .links a{height: 12px; line-height: 12px; font-size: 12px; vertical-align: middle;}
+.news a{color: rgb(102, 126, 189);}
+.news span a{background: url("../images/newsIcon.png") no-repeat; height: 18px; color: rgb(170, 178, 189); line-height: 18px; padding-left: 22px; margin-left: 5px; display: inline-block;}
+.news p a{font-size: 12px; margin-left: 15px; float: right;}
+.FocusPic .changeDiv a{left: 0px; top: 0px; display: none; position: absolute;}
+.pages a{border: 1px solid rgb(230, 233, 237); border-image: none; width: 28px; height: 30px; text-align: center; line-height: 30px; margin-left: -1px; vertical-align: middle; display: inline-block;}
+.pages a{background: rgb(255, 255, 255); color: rgb(101, 109, 120);}
+.forumLink a{background: rgb(255, 111, 61); margin: 0px -20px; height: 45px; text-align: center; color: rgb(255, 255, 255); line-height: 45px; font-size: 20px; font-weight: bold; display: block;}
+.forumLink a i{border-radius: 50%; border: 2px solid rgb(255, 255, 255); border-image: none; width: 18px; height: 18px; text-align: center; line-height: 18px; text-indent: -9999px; font-family: serif; font-style: normal; margin-left: 3px; display: inline-block; position: relative;}
+.forumLink a i::after{border-width: 6px 0px 6px 9px; border-style: dashed dashed dashed solid; border-color: transparent transparent transparent rgb(255, 255, 255); left: 6px; top: 3px; width: 0px; height: 0px; display: block; position: absolute; content: "";}
+.rom .download a{background: rgb(255, 111, 61); margin: 10px 0px; border-radius: 3px; width: 100%; height: 35px; text-align: center; color: rgb(255, 255, 255); line-height: 35px; display: block;}
+.activities dt a{height: 34px; color: rgb(67, 74, 84); line-height: 34px; display: block;}
+.activities dd a{background: rgb(255, 96, 61); border-radius: 3px; left: 0px; width: 100%; height: 28px; text-align: center; bottom: 0px; color: rgb(255, 255, 255); line-height: 28px; position: absolute;}
+.star .superStar a{width: 125px; text-align: center; margin-left: 10px; float: left;}
+.star em a{color: rgb(170, 178, 189); font-size: 12px;}
+.store .toggle a{background: rgb(204, 204, 204); margin: 0px 3px; border-radius: 50%; width: 12px; height: 12px; line-height: 12px; display: inline-block; cursor: pointer;}
+#Article .related a{}
+.signIn a:hover{color: rgb(255, 111, 61);}
+.signedIn a:hover{color: rgb(255, 111, 61);}
+.nav a:hover{background: rgb(237, 95, 48); color: rgb(255, 255, 255);}
+.bbsNav .bbsLinks a:hover{background: rgb(252, 245, 222);}
+.news a:hover{color: rgb(255, 96, 61);}
+.news span a:hover{color: rgb(101, 109, 120);}
+.pages a:hover{background: rgb(245, 247, 250);}
+.forumLink a:hover{background: rgb(255, 126, 81);}
+.rom .download a:hover{background: rgb(255, 126, 81);}
+.activities dt a:hover{color: rgb(255, 102, 0);}
+.activities dd a:hover{background: rgb(255, 126, 81);}
+.star em a:hover{color: rgb(255, 102, 0);}
+
+sub{vertical-align: text-bottom;}
+sup{vertical-align: text-top;}
+abbr{border: 0px currentColor; border-image: none; font-variant: normal;}
+p{margin: 0px; padding: 0px;}
+.footer .icp{background: rgb(241, 242, 246); height: 56px; text-align: center; color: rgb(170, 178, 189); line-height: 56px; clear: both; font-size: 12px;}
+.listTop{width: 972px; height: 164px; padding-bottom: 10px; margin-left: -12px;}
+.news p{color: rgb(112, 111, 111); line-height: 24px; font-size: 14px; margin-top: 15px;}
+#Article .content p{padding: 8px 0px; text-align: justify; line-height: 23px; font-size: 14px; -ms-word-wrap: break-word;}
+table{border-collapse: collapse; border-spacing: 0;}
+th{margin: 0px; padding: 0px;}
+th{font-style: normal; font-weight: normal;}
+th{text-align: left;}
+.search input{background: none; border: currentColor; transition:width 0.2s; border-image: none; width: 110px; height: 26px; color: rgb(255, 212, 200); line-height: 26px; text-indent: 5px; font-size: 12px; float: left; -webkit-transition: 0.2s width;}
+td{margin: 0px; padding: 0px;}
+img{border: 0px currentColor; border-image: none;}
+.header .logo a.logo_img{height: 100%; float: left; min-width: 190px;}
+.signedIn .userIntro img{margin-right: 10px; vertical-align: text-bottom; box-shadow: 0px 0px 8px #000;}
+
+
+.content img{border-radius: 5px;}
+.news img{margin-top: 10px; display: block;}
+.banner img{margin-bottom: 10px; display: block;}
+.activities dt img{left: -140px; top: 0px; position: absolute;}
+.star .superStar img{margin-bottom: 10px;}
+form{margin: 0px; padding: 0px;}
+input{margin: 0px; padding: 0px;}
+input{font-family: inherit; font-size: inherit; font-weight: inherit;}
+input{}
+
+
+.fold.search input{width: 0px;}
+.signInFrame{border: 0px currentColor; border-image: none; top: 0px; width: 208px; height: 110px; right: 12px; position: absolute;}
+
+
+
+
+#Article .info{margin: 10px 0px;}
+.main{margin: 10px auto 0px; width: 1200px;}
+.main .box{background: rgb(255, 255, 255); border-radius: 5px;}
+.banner{}
+.right .box{padding: 0px 20px; width: 260px; margin-bottom: 15px; _overflow: hidden;}
+.content .col-left .box{margin: 0px 0px 10px; padding: 0px 15px 10px;}
+.content{overflow: auto;}
+.content .all{clear: both; margin-bottom: 10px;}
+.content .left{padding: 0px 20px 20px; width: 1200px; margin-bottom: 10px; float: left;}
+.content .right{float: right;}
+.FocusPic .content{overflow: hidden;}
+.content .col-left{width: 640px; padding-right: 0px; padding-left: 0px; float: left;}
+
+#Article .content{font-size: 14px;}
+.left .pages{margin-top: 20px;}
+.news span .views{background-position: 0px 0px;}
+.news{color: rgb(190, 189, 189); font-size: 12px;}
+.news span{float: right;}
+.news span em{background: url("../images/newsIcon.png") no-repeat; height: 18px; color: rgb(170, 178, 189); line-height: 18px; padding-left: 22px; margin-left: 5px; display: inline-block;}
+.news span .views:hover{}
+.news span .replies{background-position: 0px -36px;}
+.news span .replies:hover{background-position: 0px -54px;}
+.news span .share{background-position: 0px -72px;}
+.news span .share:hover{background-position: 0px -90px;}
+.news .tag{color: rgb(190, 189, 189);}
+.right .activities{padding-bottom: 20px;}
+.hot{overflow: hidden;}
+.hot .tab{left: 0px; top: 0px; width: 302px; margin-left: -1px; position: absolute;}
+.hot .tab span{width: 150px; text-align: center; border-left-color: rgb(232, 232, 232); border-left-width: 1px; border-left-style: solid; float: left;}
+.hot .tab span.fb{background: rgb(255, 255, 255); height: 37px; line-height: 32px; border-top-color: rgb(204, 209, 217); border-top-width: 4px; border-top-style: solid;}
+.hot .more{width: 300px;}
+.editorChoice{}
+.editorChoice em{margin: 3px 0px 0px -24px; border-radius: 50%; border: 2px solid rgb(170, 178, 189); border-image: none; width: 14px; height: 14px; text-align: center; color: rgb(170, 178, 189); line-height: 14px; font-family: Tahoma, Verdana, sans-serif; font-size: 10px; float: left;}
+.editorChoice .topRank em{border: 2px solid rgb(255, 102, 0); border-image: none; color: rgb(255, 102, 0);}
+.activities{}
+.activities dl{margin: 20px 0px 0px 140px; height: 85px; position: relative;}
+.activities dd{color: rgb(170, 178, 189); overflow: hidden; font-size: 12px; white-space: nowrap; -ms-text-overflow: ellipsis;}
+.activities dd a:active{background: rgb(240, 99, 50); box-shadow: inset 0px 2px 1px rgba(0,0,0,0.2);}
+.academy{}
+.play{}
+.store{}
+.store .toggle{text-align: center; padding-bottom: 20px; margin-top: -10px; display: none;}
+.with_toggle.store .toggle{display: block;}
+.store .toggle a.current{background: rgb(255, 102, 0); cursor: default;}
+.footer .links{margin: 36px 0px 0px 28px; height: 18px; line-height: 18px; float: left;}
+.footer .slogen{background: url("../images/footerSlogen.gif") no-repeat; margin: 26px 5px 0px 0px; width: 219px; height: 36px; text-indent: -9999px; float: right;}
+

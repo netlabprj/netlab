@@ -1,0 +1,85 @@
+<?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('tpss');?>
+﻿<?php include template('common/header'); ?><script src="jquery.min.js" type="text/javascript" type="text/javascript"></script>
+<script type="text/javascript">var xllin = jQuery.noConflict();</script>
+<script>
+
+xllin(LoadService());
+function LoadService()
+{
+var name=document.getElementById("tpssname").getAttribute("value");
+var pass=document.getElementById("tpsspassword").getAttribute("value");
+//alert(document.getElementById("tpssname").getAttribute("value"));
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+//修正某些浏览器的BUG  
+      if(xmlhttp.overrideMimeType) {  
+          xmlhttp.overrideMimeType("text/html");  
+      }  
+  }
+else if(window.ActiveXObject){  
+        //针对IE5、IE5.5、IE6  
+        //这两个为插件名称作为参数传递，为了创建ActiveXObject  
+        var activeName = ["MSXML2.XMLHTTP","Microsoft.XMLHTTP"];  
+        for(var i=0;i>activeName.length();i++) {  
+              try{  
+                  //非别取出，如果创建成功则终止循环，如果失败则会抛出异常继续循环  
+                  xmlhttp = new ActiveXObject(activeName[i]);  
+                  break;  
+              }catch(e){  
+              }  
+        } 
+}
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+  var response = jQuery.parseJSON(xmlhttp.responseText);//
+  doit(response);//刷新表格操作
+    }
+  };
+xmlhttp.open("POST","http://10.220.12.143/tpss/ajax.php",true);
+//post方式需要自己设置http的请求头  
+   xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");  
+xmlhttp.withCredentials = true; //支持跨域发送cookies;
+xmlhttp.send("c=Login&a=login&MFR=1&username="+name+"&password="+pass);//方法load 代表加载表格
+}
+function SetWinHeight(obj) {	
+var win = obj; 
+if (1) {
+if (win && !window.opera) {
+if (win.contentDocument && win.contentDocument.body.offsetHeight) {
+win.height = win.contentDocument.body.offsetHeight; 
+//alert("4:"+win.height);
+}
+else if(win.Document && win.Document.body.scrollHeight) { 
+win.height = win.Document.body.scrollHeight;
+//alert("5:"+win.height);
+}
+}
+}
+}
+
+</script>
+<div id="pt" class="bm cl">
+    <div class="z">
+        <a href="./" class="nvhm" title="首页"><?php echo $_G['setting']['bbname'];?></a><em>»</em>
+        <a href="forum.php"><?php echo $_G['setting']['bbname'];?></a><em>»</em>
+        <a href="javascript:;"><?php echo $navtitle;?></a>
+    </div>
+</div>
+<div id="ct" class="wp cl" >
+    <div class="mn bm cl">
+        <div >
+<style type="text/css"> 
+ 		.kuang
+  		{ width:100%; height:860px;overflow:hidden; position:relative; }
+  		</style> 
+<div class="kuang">
+<iframe id="frame_content" style="position:absolute;width:100%;height:900px;top:-40px;" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" onload="javascript:SetWinHeight(this);" src="http://10.220.12.143/tpss/mainframe.html" >
+</iframe>
+</div>	
+        </div>
+    </div>
+</div><?php include template('common/footer'); ?>

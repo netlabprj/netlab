@@ -1,0 +1,59 @@
+.xiaoyu_focus{padding: 10px 0px 0px; width: 1000px; height: 335px; margin-bottom: 10px; position: relative; _overflow: hidden;}
+.xiaoyu_focus .col{float: left; _display: inline;}
+.xiaoyu_focus a{margin-bottom: 10px; display: block; position: relative;}
+.xiaoyu_focus img{border-radius: 5px; display: block;}
+.xiaoyu_focus em{background: rgb(0, 0, 0); border-radius: 5px; left: 0px; top: 0px; width: 100%; height: 100%; position: absolute; opacity: 0;}
+.xiaoyu_focus span{left: -3px; top: -3px; display: none; position: absolute; z-index: 100;}
+.xiaoyu_focus span img{box-shadow: 0px 0px 10px #999;}
+.xiaoyu_focus a:hover span{display: block;}
+.xiaoyu_focus .topCol{height: 100%; position: relative;}
+.xiaoyu_focus .topCol a{left: 0px; top: 0px; display: none; position: absolute;}
+.xiaoyu_focus .topCol ul{right: 5px; bottom: 15px; position: absolute; z-index: 1100;}
+.xiaoyu_focus .topCol li{border-radius: 50%; border: 1px solid rgb(255, 255, 255); transition:background 0.4s; border-image: none; width: 6px; height: 6px; overflow: hidden; margin-left: 4px; float: left; -webkit-transition: 0.4s background;}
+.xiaoyu_focus .topCol li.now{background: rgb(255, 255, 255);}
+.topLine{color: rgb(190, 189, 189); overflow: auto; font-size: 12px;}
+.topLine a{color: rgb(102, 126, 189);}
+.topLine h2{height: 60px; line-height: 60px; overflow: hidden; font-size: 22px; white-space: nowrap; -ms-text-overflow: ellipsis;}
+.topLine h2 a{color: rgb(67, 74, 84);}
+.topLine h2 a:hover{color: rgb(255, 102, 0);}
+.topLine dt a{width: 340px; height: 200px; display: block;}
+.topLine img{display: block;}
+.topLine dd{width: 288px; line-height: 16px; overflow: auto; margin-top: -200px; float: right;}
+.topLine span{float: right;}
+.topLine span em{background: url("../images/newsIcon.png") no-repeat; height: 18px; color: rgb(170, 178, 189); line-height: 18px; padding-left: 22px; margin-left: 5px; display: inline-block;}
+.topLine span a{background: url("../images/newsIcon.png") no-repeat; height: 18px; color: rgb(170, 178, 189); line-height: 18px; padding-left: 22px; margin-left: 5px; display: inline-block;}
+.topLine span a:hover{color: rgb(101, 109, 120);}
+.topLine span .views{background-position: 0px 0px;}
+.topLine span .views:hover{}
+.topLine span .replies{background-position: 0px -36px;}
+.topLine span .replies:hover{background-position: 0px -54px;}
+.topLine span .share{background-position: 0px -72px;}
+.topLine span .share:hover{background-position: 0px -90px;}
+.topLine p{color: rgb(112, 111, 111); line-height: 24px; font-size: 14px; margin-top: 18px;}
+.topLine p a{font-size: 12px; margin-left: 15px; float: right;}
+.subTopLine{background: url("../images/newsLine.gif") no-repeat bottom; width: 620px; color: rgb(190, 190, 190); overflow: auto; padding-bottom: 30px; margin-top: 25px; margin-left: -10px;}
+.subTopLine a{color: rgb(102, 126, 189);}
+.subTopLine li{width: 145px; margin-left: 10px; float: left; _display: inline;}
+.subTopLine img{display: block;}
+.subTopLine h3{height: 44px; line-height: 22px; overflow: hidden; margin-top: 5px;}
+.subTopLine h3 a{color: rgb(67, 74, 84);}
+.subTopLine h3 a:hover{color: rgb(255, 96, 61);}
+.subTopLine span{height: 18px; font-size: 12px; margin-top: 5px; display: block; white-space: nowrap;}
+.subTopLine span em{background: url("../images/newsIcon.png") no-repeat; height: 18px; color: rgb(170, 178, 189); line-height: 18px; padding-left: 22px; display: inline-block;}
+.subTopLine span a{background: url("../images/newsIcon.png") no-repeat; height: 18px; color: rgb(170, 178, 189); line-height: 18px; padding-left: 22px; display: inline-block;}
+.subTopLine span a:hover{color: rgb(101, 109, 120);}
+.subTopLine span .views{background-position: 0px 0px; float: left;}
+.subTopLine span .views:hover{}
+.subTopLine span .replies{background-position: 0px -36px;}
+.subTopLine span .replies:hover{background-position: 0px -54px;}
+.subTopLine span .share{background-position: 0px -72px; float: right;}
+.subTopLine span .share:hover{background-position: 0px -90px;}
+.location{margin-bottom: 10px;}
+.location div{margin: 0px 40px 0px -13px; padding: 8px 0px; overflow: auto; _width: 933px;}
+.location div a{width: 50px; height: 26px; color: rgb(135, 135, 135); line-height: 26px; font-size: 12px; margin-left: 53px; float: left; _display: inline;}
+.links{}
+.links .topLink{margin: 15px 15px 0px; overflow: auto;}
+.links .topLink a{margin-right: 10px; float: left;}
+.links .link{margin: 0px 15px 10px 5px; padding: 10px 0px 15px; overflow: hidden; _height: 56px; _clear: both;}
+.links .link a{padding: 0px 9px; height: 14px; color: rgb(135, 135, 135); line-height: 28px; font-size: 12px; margin-left: -1px; border-left-color: rgb(135, 135, 135); border-left-width: 1px; border-left-style: solid; white-space: nowrap;}
+
