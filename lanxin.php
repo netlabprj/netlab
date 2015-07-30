@@ -18,8 +18,8 @@ require_once './source/class/class_core.php';
 
 $discuz = & discuz_core::instance();
 
-$cachelist = array('magic','userapp','usergroups', 'diytemplatenamehome');
-$discuz->cachelist = $cachelist;
+//$cachelist = array('magic','userapp','usergroups', 'diytemplatenamehome');
+//$discuz->cachelist = $cachelist;
 $discuz->init();
 
 $space = array();
